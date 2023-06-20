@@ -1,0 +1,39 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+html,body{
+  width: 100vw;
+  height: 100vh;
+}
+.images{
+display: flex;
+}
+.image-item{
+  width: calc(100% / 4);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-item img{
+  width: 100%;
+  height: 100%;
+  
+  max-width: 100%;
+ object-fit: cover;
+ /*transition: all 200ms ease-in-out;*/
+ filter: grayscale(50%) blur(10px);
+ transition: all 500ms cubic-bezier(0.78,0.06,0.93);
+ 
+}
+.image-item.active{
+  width: 80%;
+}
+
+.image-item.active img{
+  transform: scale(1.2);
+  filter: grayscale(0%) blur(0%);
+}
+/*필터는 되도록이면 꼭 써야하는상황아니면 안쓰는게 좋다.
+용량을 많이 차지한다.*/
