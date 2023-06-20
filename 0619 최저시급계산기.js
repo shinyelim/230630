@@ -1,7 +1,7 @@
 const time = 0;
 const salartElem = document.getElementById('salary')
 //최저시급값 컨텐츠값
-let salary = parseInt(salartElem.textContent);
+let salary = parseInt(salartElem.textContent)
 //결과 DOM
 const resultElem = document.getElementById('result')
 //결과 컨텐츠 값
@@ -18,17 +18,24 @@ actionElem.addEventListener('click', () => {
   console.log()
   console.log(result)
   resultElem.textContent =result*/
+  const timeElem = document.getElementById('time')
+  let timeValue = +timeElem.value
+
+  console.log(time.value)
+
+  result = timeValue * salary;
+console.log(result)
+resultElem.textContent = result
+
 })
 //근무시간
-const timeElem = document.getElementById('time')
+
 //숫자일 경우 +를 붙일경우 string -> number 형변환
 //parseInt(value) string*//
-let timeValue = +timeElem.value
-console.log('time.value')
+
+
 //결과 계산, 근무시간, 최저시급
-result = timeValue * salary;
-console.log(result)
-resultElem.textcontent = result
+
 
 //전 펑션
 //ECMA 6 :자바스크립트를 관리하는 단체
@@ -46,4 +53,10 @@ resultElem.textcontent = result
 //addEventlistener('click',functino(){})
 //mousemove,scroll,resize(자바스크립트에서 반응형을 변경해줄수있는 변수),mouseover,mouseleave,mouseenter/
 //touch event:(주로 모바일때 많이 쓰는 변수)
-
+//ES5//
+function func(number, text) {
+  return console(number, text);
+}
+const functino = (Number, text) => console.log(Number, text)
+//function는 같은줄에서 두번이상 쓰면 작동이 안됨//
+//
